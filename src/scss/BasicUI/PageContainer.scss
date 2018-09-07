@@ -1,0 +1,5 @@
+.page-container {
+	display: grid;
+    grid-column: span 10;
+    grid-template-columns: repeat(12, 1fr);
+}
