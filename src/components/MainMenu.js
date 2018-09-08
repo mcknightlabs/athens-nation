@@ -1,20 +1,29 @@
+import React, { Component } from 'react';
+
 class MainMenu extends Component {
+
     constructor(props) {
         super(props);
         this.state = { key: 1 };
     }
-    handleSelect(key, formCategory) {
-        this.props.toggleForm(formCategory);
+    handleSelect(key, pageCategory) {
+        this.props.togglePage(pageCategory);
         this.setState({ key });
     }
-    render(){
+    render() {
         return (
-            <Nav bsStyle="tabs" activeKey={this.state.key}>
-            <NavItem eventKey={1} title="Form1" onClick={() => this.handleSelect(1, 'form1')}>Form1</NavItem>
-            <NavItem eventKey={2} title="Form2" onClick={() => this.handleSelect(2, 'form2')}>Form2</NavItem>
-            <NavItem eventKey={3} title="Form3" onClick={() => this.handleSelect(3, 'form3')}>Form3</NavItem>
-            <NavItem eventKey={4} title="Form4" onClick={() => this.handleSelect(4, 'form4')}>Form4</NavItem>
-            </Nav>
+            <nav className="main-menu" bsStyle="tabs" activeKey={this.state.key}>
+                <ul>
+                    <a eventKey={1} title="Reflect" onClick={() => this.handleSelect(1, 'Reflect')}>Reflect</a>
+                    <a eventKey={2} title="Connect" onClick={() => this.handleSelect(2, 'Connect')}>Connect</a>
+                    <a eventKey={3} title="Eat" onClick={() => this.handleSelect(3, 'Eat')}>Eat</a>
+                    <a eventKey={4} title="Move" onClick={() => this.handleSelect(4, 'Move')}>Move</a>
+                    <a eventKey={5} title="Engage" onClick={() => this.handleSelect(5, 'Engage')}>Engage</a>
+                </ul>
+            </nav>
         );
     }
+    
 }
+
+export default MainMenu;

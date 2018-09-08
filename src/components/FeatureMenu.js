@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class ReflectMenu extends React.Component {
+class FeatureMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = { key: 1 };
     }
-    handleSelect(key, pageCategory) {
-        this.props.togglePage(pageCategory);
+    handleSelect(key, featureCategory) {
+        this.props.toggleFeature(featureCategory);
         this.setState({ key });
     }
     render(){
@@ -21,4 +21,4 @@ class ReflectMenu extends React.Component {
     }
 }
 
-export default ReflectMenu;
+export default FeatureMenu;

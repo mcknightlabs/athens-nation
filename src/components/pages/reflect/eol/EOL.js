@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import PrimaryButton from './UI/Button'; 
-import MemorialComposer from './MemorialComposer';  
-import EOLMenu from './EOLMenu';
+import MemorialComposer from 'components/pages/reflect/eol/subfeatures/MemorialComposer';  
+import EOLMenu from 'components/pages/reflect/eol/EOLMenu';
 
 class EOL extends React.Component {
 	render() {

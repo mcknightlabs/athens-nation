@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PrimaryButton from './UI/Button';
+import PrimaryButton from 'components/UI/Button';
 
 class MemorialComposer extends React.Component {
 	render() {

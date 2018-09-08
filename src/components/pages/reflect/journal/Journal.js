@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import MyDate from './Date';
-import ControlledEditor from './Editor';
-import JournalsMenu from './JournalsMenu';
+import MyDate from 'components/Date';
+import ControlledEditor from 'components/Editor';
+import JournalsMenu from 'components/pages/reflect/journal/JournalsMenu';
  
 class Journal extends Component {
     render() {
     	return (
     		<div className="page-container">
-	    		<JournalsMenu toggleJournal={this.toggleJournal} />
+	    		<JournalsMenu />
 	    		<div className="canvas">
 		    		<div className="journal">
 				    	<div className="entry-meta-data">
