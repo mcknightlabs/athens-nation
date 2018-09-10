@@ -4,6 +4,7 @@ import Alert from 'components/Alert';
 import Header from 'components/Header';
 import Reflect from 'components/pages/reflect/Reflect';
 import Connect from 'components/pages/connect/Connect';
+import Eat from 'components/pages/eat/Eat';
 import MainMenu from 'components/MainMenu';
 
 {/* import logo from './logo.svg'; */}
@@ -14,32 +15,33 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentMode: 'Reflect',
+            currentPage: 'Reflect',
         };
         this.togglePage = this.togglePage.bind(this) // must bind because "this.setState is not a function"
     }
-    // returns the corresponding page based on currentMode
-    getPage(currentMode) {
+    // returns the corresponding page based on currentPage
+    getPage(currentPage) {
         const pages =  {
             Reflect: <Reflect/>,
-            Connect: <Connect/>
-           /* Eat: <Eat/>,
+            Connect: <Connect/>,
+            Eat: <Eat/>
+           /*
             Move: <Move/>,
             Engage: <Engage/> */
         };
-        return pages[currentMode];
+        return pages[currentPage];
     }
-    // update currentMode when MainMenu triggers the callback
-    togglePage(currentMode) {
-        this.setState({ currentMode });
+    // update currentPage when MainMenu triggers the callback
+    togglePage(currentPage) {
+        this.setState({ currentPage });
     }
 
     render() {
         return (
             <div className="App">
                 <Alert />
-                <MainMenu togglePage={this.togglePage} />
-                {this.getPage(this.state.currentMode)}
+                <Header togglePage={this.togglePage} />
+                {this.getPage(this.state.currentPage)}
             </div>
         );
     }

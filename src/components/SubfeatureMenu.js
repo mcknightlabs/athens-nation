@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class JournalsMenu extends React.Component {
+class SubfeatureMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = { key: 1 };
@@ -21,4 +21,4 @@ class JournalsMenu extends React.Component {
     }
 }
 
-export default JournalsMenu;
+export default SubfeatureMenu;

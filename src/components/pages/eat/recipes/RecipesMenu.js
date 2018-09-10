@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class JournalsMenu extends React.Component {
+class RecipesMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = { key: 1 };
@@ -13,12 +13,13 @@ class JournalsMenu extends React.Component {
         return (
             <nav className="feature-sub-menu" bsStyle="tabs" activeKey={this.state.key}>
                 <ul>
-                    <a eventKey={1} title="New" onClick={() => this.handleSelect(1, 'New')} class="action">Write</a>
-                    <a eventKey={2} title="Personal" onClick={() => this.handleSelect(2, 'Personal')}>Personal</a>
+                    <a eventKey={1} title="French" onClick={() => this.handleSelect(1, 'French')}>French</a>
+                    <a eventKey={2} title="Indian" onClick={() => this.handleSelect(2, 'Indian')}>Indian</a>
+                    <a eventKey={3} title="Thai" onClick={() => this.handleSelect(3, 'Thai')}>Thai</a>
                 </ul>
             </nav>
         );
     }
 }
 
-export default JournalsMenu;
+export default RecipesMenu;

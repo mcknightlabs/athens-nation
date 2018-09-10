@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
-import MemorialComposer from 'components/pages/reflect/eol/subfeatures/MemorialComposer';  
-import KeyInfo from 'components/pages/reflect/eol/subfeatures/KeyInfo';  
-import EOLMenu from 'components/pages/reflect/eol/EOLMenu';
+import RecipesMenu from 'components/pages/eat/recipes/RecipesMenu';
+import MealPlanner from 'components/pages/eat/recipes/subfeatures/MealPlanner';
 
-class EOL extends React.Component {
+class SocialMeals extends React.Component {
 	// toggles feature or subfeature type
     constructor(props) {
         super(props);
         this.state = {
-            currentSubfeature: 'KeyInfo'
+            currentSubfeature: 'MealPlanner'
         };
         this.toggleSubfeature = this.toggleSubfeature.bind(this)
     }
 	getSubfeature(currentSubfeature) {
         const subfeatures =  {
-            KeyInfo: <KeyInfo/>,
-            MemorialComposer: <MemorialComposer/>
+            MealPlanner: <MealPlanner/>
         };
         return subfeatures[currentSubfeature];
     }
@@ -26,7 +24,7 @@ class EOL extends React.Component {
 	render() {
 		return (
 			<div className="page-container">
-				<EOLMenu toggleSubfeature={this.toggleSubfeature} />
+				<RecipesMenu toggleSubfeature={this.toggleSubfeature} />
 	    		<div className="canvas">
                     {this.getSubfeature(this.state.currentSubfeature)}
 				</div>
@@ -35,4 +33,4 @@ class EOL extends React.Component {
   	}
 }
 
-export default EOL;
+export default SocialMeals;

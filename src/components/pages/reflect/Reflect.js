@@ -1,36 +1,35 @@
 import React, {Component} from 'react';
+import FeatureMenu from 'components/FeatureMenu'; 
 import Journal from 'components/pages/reflect/journal/Journal';
 import EOL from 'components/pages/reflect/eol/EOL';
-import FeatureMenu from 'components/FeatureMenu'; 
 
 class Reflect extends React.Component {
 
-	// toggles feature type
+	// toggles feature or subfeature type
     constructor(props) {
         super(props);
         this.state = {
-            currentMode: 'Journal',
+            currentFeature: 'Journal'
         };
         this.toggleFeature = this.toggleFeature.bind(this) // must bind because "this.setState is not a function"
     }
-    // returns the corresponding feature based on currentMode
-    getFeature(currentMode) {
+    // returns the corresponding feature based on currentFeature
+    getFeature(currentFeature) {
         const features =  {
             Journal: <Journal/>,
         	EOL: <EOL/>
         };
-        return features[currentMode];
+        return features[currentFeature];
     }
-    // update currentMode when FeatureMenu triggers the callback
-    toggleFeature(currentMode) {
-        this.setState({ currentMode });
+    // update currentFeature when FeatureMenu triggers the callback
+    toggleFeature(currentFeature) {
+        this.setState({ currentFeature });
     }
-
     render() {
         return (
             <div className="container">
 			    <FeatureMenu toggleFeature={this.toggleFeature} />
-			    {this.getFeature(this.state.currentMode)}
+                {this.getFeature(this.state.currentFeature)}
 			</div>
         );
     }

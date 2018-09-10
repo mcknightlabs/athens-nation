@@ -1,9 +1,7 @@
 /* canvas */
 .canvas {
-    display: grid;
-    grid-column: span 8;
-    grid-template-columns: repeat(12, 1fr);
-    padding: 2rem 1rem;
+    grid-column: span 10;
+    padding: 2rem;
     h1 {
         font-size: 1.5rem;
     }

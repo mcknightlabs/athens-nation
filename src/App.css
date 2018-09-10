@@ -8,7 +8,7 @@ button {
   text-align: center;
   width: 100%; }
 
-.common-button, input[type=button] {
+.primary-button, input[type=button] {
   color: #fff;
   white-space: nowrap;
   display: inline-block;
@@ -17,7 +17,7 @@ button {
   padding: 0 14px;
   -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  background: #fff;
+  background: #0021FF;
   border: none;
   border-radius: 4px;
   font-size: 15px;
@@ -28,7 +28,7 @@ button {
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
   cursor: pointer; }
-.common-button:hover, input[type=button]:hover {
+.primary-button:hover, input[type=button]:hover {
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
   -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
@@ -36,10 +36,8 @@ button {
 
 /* canvas */
 .canvas {
-  display: grid;
-  grid-column: span 8;
-  grid-template-columns: repeat(12, 1fr);
-  padding: 2rem 1rem; }
+  grid-column: span 10;
+  padding: 2rem; }
 .canvas h1 {
   font-size: 1.5rem; }
 
@@ -137,13 +135,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll; }
 
+img {
+  max-width: 100%; }
+
 p, li {
-  line-height: 1.6; }
+  line-height: 1.6;
+  margin: .5rem 0 1.5rem 0; }
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 1.5rem 0 .5rem 0; }
 
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: .5rem; }
+
+.headshot {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: middle; }
 
 button {
   background: #F1F1F1;
@@ -161,6 +177,8 @@ button {
   background-color: #fff;
   padding: 1rem 1.5rem;
   border-bottom: solid 1px #e3e3e4; }
+.app-header .headshot {
+  float: right; }
 
 .app-title {
   color: #0021FF;
@@ -178,9 +196,7 @@ button {
     transform: rotate(360deg); } }
 .main-menu {
   display: inline-block;
-  float: right;
   list-style-type: none;
-  margin: .5rem 2rem 0 0;
   padding: 0; }
 .main-menu a {
   display: inline-block;
@@ -563,14 +579,6 @@ template {
   padding: 1rem 1.5rem; }
 .app-alert a {
   color: #fff; }
-.app-alert img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: solid 1px #fff;
-  display: inline-block;
-  margin-right: 1rem;
-  vertical-align: middle; }
 
 button {
   background: #F1F1F1;
@@ -1606,11 +1614,58 @@ button {
 /* UniqueComponents */
 .memorial-composer {
   grid-column: span 10; }
+.memorial-composer ul {
+  list-style-type: none;
+  margin: 3rem 0 0 0;
+  padding: 0; }
+.memorial-composer li {
+  border-bottom: solid 1px #e3e3e4;
+  margin-bottom: 1rem;
+  padding: 0 0 1rem 0; }
+.memorial-composer li:last-of-type {
+  border: none; }
+.memorial-composer a:hover {
+  color: #0021FF;
+  -webkit-transition: color 100ms linear;
+  -ms-transition: ccolor 100ms linear;
+  transition: color 100ms linear;
+  cursor: pointer; }
 
 .journal {
   grid-column: span 12; }
 
 .editorFunctions {
   margin-bottom: 50px; }
+
+.market .market-items {
+  list-style-type: none;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem; }
+.market li {
+  display: inline-block;
+  grid-column: span 3; }
+.market li .item-name {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500; }
+.market li .price-meta {
+  display: inline-block; }
+.market li .item-price {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0021FF; }
+.market li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%; }
+.market li a:hover {
+  opacity: .8; }
+.market li button {
+  margin-top: 1rem; }
 
 /*# sourceMappingURL=App.css.map */

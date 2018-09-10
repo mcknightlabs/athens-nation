@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class MainMenu extends Component {
-
     constructor(props) {
         super(props);
         this.state = { key: 1 };
@@ -23,7 +22,6 @@ class MainMenu extends Component {
             </nav>
         );
     }
-    
 }
 
 export default MainMenu;

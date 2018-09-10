@@ -25,6 +25,7 @@ class Header extends React.Component {
                         <a eventKey={5} title="Engage" onClick={() => this.handleSelect(5, 'Engage')}>Engage</a>
                     </ul>
                 </nav>
+                <img src='media/ryan.jpg' class="headshot" />
             </header>
     	);
   	}

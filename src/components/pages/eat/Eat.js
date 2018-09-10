@@ -1,24 +1,27 @@
 import React, {Component} from 'react'; 
-import Crew from 'components/pages/connect/crew/crew'; 
-import IC from 'components/pages/connect/IC/IC'; 
-import FeatureMenu from 'components/FeatureMenu';
-import SubfeatureMenu from 'components/SubfeatureMenu'; 
+import Market from 'components/pages/eat/market/Market'; 
+import Recipes from 'components/pages/eat/recipes/Recipes';  
+import Garden from 'components/pages/eat/garden/Garden';  
+import SocialMeals from 'components/pages/eat/socialmeals/SocialMeals';  
+import EatMenu from 'components/pages/eat/EatMenu'; 
 
-class Connect extends React.Component {
+class Eat extends React.Component {
 
 	// toggles feature type
     constructor(props) {
         super(props);
         this.state = {
-            currentFeature: 'IC',
+            currentFeature: 'Market',
         };
         this.toggleFeature = this.toggleFeature.bind(this) // must bind because "this.setState is not a function"
     }
     // returns the corresponding page based on currentFeature
     getFeature(currentFeature) {
         const features =  {
-            IC: <IC/>,
-        	Crew: <Crew/>
+            Market: <Market/>,
+            Recipes: <Recipes/>,
+            Garden: <Garden/>,
+        	SocialMeals: <SocialMeals/>
         };
         return features[currentFeature];
     }
@@ -30,11 +33,11 @@ class Connect extends React.Component {
     render() {
         return (
             <div className="container">
-			    <FeatureMenu toggleFeature={this.toggleFeature} />
+			    <EatMenu toggleFeature={this.toggleFeature} />
                 {this.getFeature(this.state.currentFeature)}
 			</div>
         );
     }
 }
 
-export default Connect;
+export default Eat;

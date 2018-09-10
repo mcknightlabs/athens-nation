@@ -5,6 +5,9 @@
     background-color: #fff;
     padding: 1rem 1.5rem;
     border-bottom: solid 1px #e3e3e4;
+    .headshot {
+        float:right;
+    }
 }
 .app-title {
     color: #0021FF;
@@ -22,9 +25,7 @@
 
 .main-menu {
     display: inline-block;
-    float: right;
     list-style-type: none;
-    margin: .5rem 2rem 0 0;
     padding: 0;
     a {
         display: inline-block;

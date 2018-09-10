@@ -7,23 +7,7 @@ class IC extends Component {
     render() {
     	return (
     		<div className="page-container">
-	    		<JournalsMenu />
-	    		<div className="canvas">
-		    		<div className="journal">
-				    	<div className="entry-meta-data">
-						    <MyDate />
-						</div>
-						<div className="editor">
-							Crew
-						</div>
-						<div className="canvas-features">
-						    <button>PDF</button>
-						    <button>Print</button>
-						    <button>Share</button>
-						    <button>Get it bound</button>
-						</div>
-					</div>
-				</div>
+	    		Test
 			</div>
     	)
     }

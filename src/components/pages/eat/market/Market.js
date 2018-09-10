@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
-import MemorialComposer from 'components/pages/reflect/eol/subfeatures/MemorialComposer';  
-import KeyInfo from 'components/pages/reflect/eol/subfeatures/KeyInfo';  
-import EOLMenu from 'components/pages/reflect/eol/EOLMenu';
+import IndianMarket from 'components/pages/eat/market/subfeatures/IndianMarket';
+import FrenchMarket from 'components/pages/eat/market/subfeatures/FrenchMarket';
+import MarketMenu from 'components/pages/eat/market/MarketMenu';
 
-class EOL extends React.Component {
+class Market extends React.Component {
 	// toggles feature or subfeature type
     constructor(props) {
         super(props);
         this.state = {
-            currentSubfeature: 'KeyInfo'
+            currentSubfeature: 'IndianMarket'
         };
         this.toggleSubfeature = this.toggleSubfeature.bind(this)
     }
 	getSubfeature(currentSubfeature) {
         const subfeatures =  {
-            KeyInfo: <KeyInfo/>,
-            MemorialComposer: <MemorialComposer/>
+            IndianMarket: <IndianMarket/>,
+            FrenchMarket: <FrenchMarket/>
         };
         return subfeatures[currentSubfeature];
     }
@@ -26,7 +26,7 @@ class EOL extends React.Component {
 	render() {
 		return (
 			<div className="page-container">
-				<EOLMenu toggleSubfeature={this.toggleSubfeature} />
+				<MarketMenu toggleSubfeature={this.toggleSubfeature} />
 	    		<div className="canvas">
                     {this.getSubfeature(this.state.currentSubfeature)}
 				</div>
@@ -35,4 +35,4 @@ class EOL extends React.Component {
   	}
 }
 
-export default EOL;
+export default Market;
