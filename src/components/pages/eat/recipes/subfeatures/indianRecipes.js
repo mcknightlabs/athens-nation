@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class KeyInfo extends React.Component {
+class IndianRecipes extends React.Component {
 	render() {
 		return (
 		<div className="memorial-composer">
@@ -84,4 +84,4 @@ class KeyInfo extends React.Component {
   }
 }
 
-export default KeyInfo;
+export default IndianRecipes;
